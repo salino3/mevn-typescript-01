@@ -1,20 +1,25 @@
 <template>
- <main>
-    <h1>Task Details!</h1>
-    <form @submit.prevent="hanldeUpdate()" >
+ <main class="layoutDetail">
+    <h1 class="text-center">Task Details</h1>
+    <form class=" rounded flex flex-col justify-center items-center gap-5 m-2 mt-5 p-10 border-gray-900 border-2" @submit.prevent="hanldeUpdate()" >
       <input
        type="text"
        name="title"
+       class="input"
+       placeholder="Write a title"
        v-model="currentTask.title" >
       <textarea
        name="description" 
+       placeholder="Write a description"
        id="description" 
        v-model="currentTask.description" 
-       cols="30" rows="3"
+        rows="8"
        ></textarea>
-       <button>Update</button>
+       <div class="boxBtns">
+          <button class="rounded border-spacing-4  bg-yellow-500 text-white">Update</button>
+          <button @click="handleDelete()" class="rounded bg-red-500 text-white" >Delete</button>
+       </div>
     </form>
-    <button @click="handleDelete()">Delete</button>
  </main>
 </template>
 
@@ -61,6 +66,31 @@ export default defineComponent({
 
 </script>
 
-<style lang="scss" scope>
+<style lang="css" scope>
 
+h1 {
+      font-size: 32px;
+ }
+
+textarea, 
+input {
+   padding-left: 3px;
+ }
+
+ .boxBtns {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 8px;
+    margin-left: auto;
+    height: 28px;
+    font-size: 20px;
+
+}
+
+button {
+    width: 90px;
+    height: 40px;
+    border: none;
+}
 </style>
