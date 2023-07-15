@@ -1,9 +1,18 @@
 <template>
     <main class="layoutList">
-        <h1>Your Task List</h1>
+  <div class="w-auto flex justify-center items-center text-center m-10 p-1 pb-2 rounded-sm  bg-red-300 hover:bg-red-500 active:bg-blue-500">
+    <h1 class="text-3xl font-bold underline ">
+      Welcome to your Task List App! 
+    </h1>
+  </div>
+        <h2>Your Task List</h2>
         <hr id="hr">
-            <div
-             v-for="task in tasks" :key="task._id">
+        <div v-if="tasks.length === 0">
+            <p class="font-black text-white bg-blue-300 rounded p-2 mt-5">No tasks available..</p>
+         </div>
+         <div v-else>
+            <div v-for="task in tasks" :key="task._id">
+            
              <div class="card">
               <p class="paragraphTitle">
                  Name task: <span class="titleValue">{{ task.title }}</span>
@@ -24,9 +33,10 @@
                  @click="$router.push(`/tasks/${task._id}`)">
                     Update
                 </button>  
-            </div>
+             </div>
              </div>
             </div>
+          </div>
     </main>
 </template>
 
