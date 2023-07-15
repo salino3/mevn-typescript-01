@@ -11,19 +11,19 @@
               <p class="paragraghDesc">
                 Description: <span class="descValue"> {{ task.description }} </span>
               </p>
-              <div class="boxBnts">
-                  <button class="doneValue border border-1 border-black rounded 
-               text-white flex justify-center items-center px-1"
+              <div class="boxBtns">
+            
+                  <button class=" rounded text-white flex justify-center items-center px-1"
                   :class="task.done ? 'bg-green-500 line-through' : 'bg-red-500 '"
                      @click="toggleTask(task)" 
                       >
                     {{ task.done ? "Done" : "Undone" }}
                 </button>
                 <button class=" text-yellow-400  border-1 border-yellow-400 rounded 
-              hover:bg-yellow-400 hover:text-white hover:border-black  flex justify-center items-center px-1"
+              hover:bg-yellow-400 hover:text-white  flex justify-center items-center px-1"
                  @click="$router.push(`/tasks/${task._id}`)">
                     Update
-                </button>
+                </button>  
             </div>
              </div>
             </div>
@@ -78,12 +78,20 @@ export default defineComponent({
     color: slategray;
 }
 
-.boxBnts {
- display: flex;
- flex-direction: row;
- gap: 8px;
- font-size: 20px;
- height: 28px;
+.boxBtns {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 8px;
+    margin-left: auto;
+    height: 28px;
+    font-size: 20px;
+
+}
+
+button {
+    width: 90px;
+    border: none
 }
 
 </style>
