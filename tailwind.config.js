@@ -11,10 +11,7 @@ module.exports = {
         primary: "#ff0000",
         secondary: "#00ff00",
       },
-      fontSize: {
-        "2xl": "1.5rem",
-        "3xl": "2rem",
-      }
+   
       
     },
   },

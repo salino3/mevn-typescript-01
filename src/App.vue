@@ -9,9 +9,11 @@
    class="primaryLayer"
   >
   <Navbar />
-  <h1 class="text-3xl font-bold underline bg-red-300 hover:bg-red-500 active:bg-blue-500">
-    Hello World!
-  </h1>
+  <div class="w-min whitespace-nowrap  bg-red-300">
+    <h1 class="text-3xl font-bold underline   hover:bg-red-500 active:bg-blue-500">
+      Welcome to your Task List App! 
+    </h1>
+  </div>
  
   <hr id="hr">
   <router-view />

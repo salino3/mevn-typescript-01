@@ -1,6 +1,6 @@
-<template>
- <nav>
-   <ul>
+<template >
+ <nav class="navbar">
+   <ul class="ulNav">
       <li>
          <router-link to="/">Tasks</router-link>
       </li>
@@ -19,6 +19,7 @@ export default defineComponent({
 })
 </script>
 
-<style lang="scss" scope>
+<style  scope>
 
+ 
 </style>

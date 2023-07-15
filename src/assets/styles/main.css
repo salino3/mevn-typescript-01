@@ -10,6 +10,32 @@
  }
 }
 
+@layer components {
+
+    .navbar {
+        @apply bg-slate-400 p-2 pb-5 flex items-center justify-center;
+
+    }
+
+    .ulNav {
+        @apply flex flex-row gap-8 font-semibold border-b-2 active:text-red-600 ;
+        font-size: 22px;
+
+    }
+    
+    .ulNav li {
+       @apply  flex justify-center items-center;
+       width: 130px;
+
+    }
+
+    .ulNav li:hover {
+        @apply bg-slate-500 rounded;
+    }
+  
+
+}
+
 @layer utilities {
  .btnSave {
         @apply inline-flex justify-center 
