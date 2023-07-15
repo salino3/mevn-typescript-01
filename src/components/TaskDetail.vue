@@ -8,11 +8,12 @@
        v-model="currentTask.title" >
       <textarea
        name="description" 
+       placeholder="Write a description"
        id="description" 
        v-model="currentTask.description" 
        cols="30" rows="3"
        ></textarea>
-       <button>Update</button>
+       <button class="border-spacing-4 bg-red-500">Update</button>
     </form>
     <button @click="handleDelete()">Delete</button>
  </main>
