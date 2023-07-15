@@ -1,12 +1,13 @@
 <template>
-    <main>
-        <h1>Task List</h1>
+    <main class="layoutList">
+        <h1>Your Task List</h1>
+        <hr id="hr">
         <ul>
             <li 
              v-for="task in tasks"
              @click="$router.push(`/tasks/${task._id}`)"
              :key="task._id">
-                {{ task.title }}
+                {{ task.title }} 
             </li>
         </ul>
     </main>
