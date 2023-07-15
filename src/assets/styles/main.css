@@ -37,13 +37,13 @@
     }
 
     .ulNav {
-        @apply flex flex-row gap-8 font-semibold border-b-2 active:text-red-600 ;
+        @apply flex flex-row gap-8 font-semibold border-b-2 ;
         font-size: 22px;
 
     }
     
     .ulNav li {
-       @apply  flex justify-center items-center;
+       @apply  flex justify-center items-center active:text-red-600 ;
        width: 130px;
 
     }
@@ -56,11 +56,11 @@
 @layer utilities {
  .btnSave {
         @apply inline-flex justify-center 
-        items-center whitespace-normal bg-red-500  transition-colors
+        items-center whitespace-normal bg-blue-500  transition-colors
         py-2 px-2 text-blue-400 rounded;  
         
     &:hover {
-        @apply bg-red-400 text-white
+        @apply bg-blue-400 text-white
 
        }
     }
